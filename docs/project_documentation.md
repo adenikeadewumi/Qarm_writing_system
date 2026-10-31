@@ -93,7 +93,7 @@ It connects the digit recognition process to the robotic writing implementation.
 
 This establishes the connection between the computer vision system and the physical robot.
 
-### 4.3 `qarm_cornell_writer.py`
+### 4.3 `qarm_writer_main.py`
 
 This program implements the Cornell-style trajectory planner and writing system.
 
@@ -543,7 +543,7 @@ The successful physical reproduction of several recognised digits demonstrates t
 |---|---|
 | `mnist_digit_camera.py` | Camera-based and image-based digit recognition. |
 | `mnist_qarm_integration.py` | Integration of digit recognition with robotic writing. |
-| `qarm_cornell_writer.py` | Cornell-style trajectory planning and QArm execution. |
+| `qarm_writer_main.py` | Cornell-style trajectory planning and QArm execution. |
 | `qarm_write_text.py` | Separate glyph-based text-writing implementation and shared utilities. |
 | `paddle_camera_ocr.py` | Separate OCR experiment. |
 | `mnist-8.onnx` | Existing ONNX digit-classification model. |
