@@ -1,0 +1,11 @@
+# Core dependencies for camera-based digit recognition
+numpy
+opencv-python
+
+# Optional: required only for the separate PaddleOCR experiment
+# paddleocr
+
+# Quanser dependencies (pal.products.qarm and hal.products.qarm)
+# are supplied through the supported Quanser software/Python environment.
+# Install them using the instructions for your QArm setup; they are not
+# standard packages installed by this requirements file.
