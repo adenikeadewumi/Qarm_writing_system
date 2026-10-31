@@ -7,7 +7,7 @@ MNIST Camera -> QArm Cornell Writer integration.
 4. Run the writer's dry-run planner.
 5. Only if the plan succeeds, optionally start physical writing.
 
-Keep mnist-8.onnx in this script's folder.
+Keep mnist-8.onnx and the writer files in this repository folder.
 """
 
 import subprocess
@@ -25,13 +25,9 @@ import numpy as np
 BASE_DIR = Path(__file__).resolve().parent
 MODEL_PATH = BASE_DIR / "mnist-8.onnx"
 
-WRITER_SCRIPT = Path(
-    r"C:\Users\david\OneDrive\Documents\Qarm writing research"
-    r"\claude qarm1\qarm_cornell_writer.py"
-)
-
-# The writer requires qarm_write_text.py in the same folder.
-WRITER_DIR = WRITER_SCRIPT.parent
+# Use the writer committed in this repository, not a machine-specific path.
+WRITER_SCRIPT = BASE_DIR / "qarm_writer_main.py"
+WRITER_DIR = BASE_DIR
 
 CAMERA_INDEX = 0
 ROI_SIZE = 280
@@ -151,7 +147,7 @@ def run_writer(digit):
 
     if not glyph_file.exists():
         raise FileNotFoundError(
-            "qarm_write_text.py must be in the writer folder:\n"
+            "qarm_write_text.py must be in the repository folder:\n"
             f"{WRITER_DIR}"
         )
 
